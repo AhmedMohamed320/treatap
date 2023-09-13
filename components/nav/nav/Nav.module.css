@@ -1,0 +1,32 @@
+.section {
+    background-color: var(--black-1);
+    border-radius: 1.5rem;
+    padding: 0.5rem;
+    color: var(--white-1);
+    margin-top: 1rem !important;
+    font-size: 1.7rem;
+}
+
+.logo {
+    padding: 0.5rem;
+    width: 5rem;
+    overflow: hidden;
+}
+
+.section ul span{
+    width: 5px ;
+    height: 5px;
+    background-color: rgb(83, 83, 83);
+    border-radius: 50%;
+}
+
+.section button{
+    background-color: var(--white-1);
+    padding: 1rem 1.5rem;
+    border-radius: 0.8rem;
+    color: var(--black-1);
+    font-size: 1.5rem;
+    font-weight: 500;
+    outline: none;
+    border: none;
+}

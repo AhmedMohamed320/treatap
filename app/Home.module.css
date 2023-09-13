@@ -1,0 +1,204 @@
+.section {
+    overflow: hidden;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10rem;
+}
+
+.part1 {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+    color: var(--black-1);
+    font-size: 7rem;
+    font-weight: 600;
+    height: 75%;
+    padding: 2rem;
+}
+
+.text > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.specialSpan {
+    color: var(--green-1);
+    display: flex;
+    gap: 3rem;
+}
+
+.specialSpan span {
+    display: inline-block;
+    font-size: 5rem;
+    opacity: 0.5;
+    text-align: center;
+}
+
+.specialSpan span:nth-of-type(1) {
+    animation: animationText 2s 0s infinite;
+}
+
+.specialSpan span:nth-of-type(2) {
+    animation: animationText 2s 0.75s infinite;
+}
+
+.specialSpan span:nth-of-type(3) {
+    animation: animationText 2s 1.5s infinite;
+}
+
+@keyframes animationText {
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.text p.sub {
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.text .join {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.text .join > div:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: var(--white-1);
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--black-1);
+    border-radius: 10rem;
+}
+
+.text .join .icon {
+    font-size: 1.5rem;
+}
+
+.text .join > div:nth-of-type(1) button {
+    border: none;
+    outline: none;
+}
+
+.text .join > div:nth-of-type(2) ul li{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 2px solid var(--green-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-left: -1.5rem;
+    background-color: var(--white-1);
+}
+
+.text .join > div:nth-of-type(2) ul li img{
+    height: 90%;
+}
+
+.text .join > div:nth-of-type(2)>p{
+    background-color: var(--yellow-1);
+    color: var(--black-1);
+    padding: 0.5rem 1.5rem;
+    font-size: 2rem;
+    border-radius: 10rem;
+}
+
+.text .join > div:nth-of-type(2)>p span{
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.service {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.service > div {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 25rem;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    background-color: var(--green-3);
+    position: relative;
+}
+
+.service > div > div:nth-of-type(1) {
+    background-color: var(--green-1);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+.service > div > div:nth-of-type(2) {
+    padding: 1rem;
+}
+
+.service > div > div:nth-of-type(2) p {
+    width: 80%;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+.service > div > div:nth-of-type(2) p:nth-of-type(2) {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.service > div > div:nth-of-type(1) img {
+    width: 7rem;
+}
+
+.service > div .arrow {
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    background-color: var(--yellow-1);
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    border: 1rem solid var(--green-5);
+}
+
+.service > div .arrow::before,
+.service > div .arrow::after {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--green-3);
+}
+
+.service > div .arrow::before {
+    top: 0;
+    right: -3rem;
+    border-top-left-radius: 5rem;
+    box-shadow: -0.7rem -0.8rem 0 0.4rem var(--green-5);
+}
+
+.service > div .arrow::after {
+    bottom: -3rem;
+    left: 0;
+    border-top-left-radius: 5rem;
+    box-shadow: -0.8rem -0.6rem 0 0.4rem var(--green-5);
+}
