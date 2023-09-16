@@ -1,7 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
+/* @font-face {
+    font-family: 'Avenir Regular';
+    src: url("/fonts/alfont_com_AlFont_com_Avenir-Regular.otf");
+} */
+
 :root {
     --white-1: #ffffff;
     --black-1: #010101;
@@ -18,10 +23,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Rubik';
 }
 
 body {
+    /* font-family: Avenir Regular; */
     background: var(--green-5);
     font-size: 62.5%;
     direction: rtl;
