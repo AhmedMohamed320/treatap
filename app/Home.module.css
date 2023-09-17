@@ -1,4 +1,4 @@
-.up{
+.up {
     position: relative;
     overflow: hidden;
 }
@@ -23,7 +23,7 @@
     animation: animation-1 1s ease-in-out forwards;
 }
 
-.part2 > p{
+.part2 > p {
     text-align: center;
     padding-bottom: 3rem;
     font-size: 2rem;
@@ -307,5 +307,8 @@
 @media (max-width: 40rem) {
     .service {
         grid-template-columns: repeat(1, 1fr);
+    }
+    .text .join > div:nth-of-type(2) ul {
+        display: none;
     }
 }
