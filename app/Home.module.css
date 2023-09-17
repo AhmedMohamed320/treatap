@@ -1,3 +1,8 @@
+.up{
+    position: relative;
+    overflow: hidden;
+}
+
 .section {
     height: 100vh;
     display: flex;
