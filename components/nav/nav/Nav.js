@@ -1,35 +1,58 @@
-import React from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import classes from "./Nav.module.css";
-const Nav = () => {
+import { TbLogin } from "react-icons/tb";
+import { BsListNested } from "react-icons/bs";
+import { FaUserCircle } from "react-icons/fa";
+
+const Nav = (props) => {
+    const [isFixed, setIsFixed] = useState(false);
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+            setIsFixed(scrollY > 10);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+    const navClass = `${classes.section}  ${
+        isFixed ? `${classes.onScroll}` : ""
+    }`;
     return (
-        <section
-            className={`flex items-center justify-between mainContainer ${classes.section}`}
-        >
-            <div className="flex items-center justify-between gap-6">
-                <div className={classes.logo}>
-                    <img src="/image/test-logo.png" alt="" />
+        <section className={navClass}>
+            <div className="mainContainer">
+                <div className={`md:hidden`}>
+                    <BsListNested
+                        className="text-4xl cursor-pointer"
+                        onClick={props.onShowAside}
+                    />
                 </div>
-                <div>
-                    <ul className="flex items-center gap-4">
+                <div className={classes.logo}>
+                    <img src="/image/mainLogo.png" alt="" />
+                </div>
+                <div className={`hidden md:block ${classes.list}`}>
+                    <ul className="flex items-center gap-10 text-2xl md">
                         <li>
-                            <p>الصفحه الرئيسيه</p>
+                            <p>الرئيسيه</p>
                         </li>
-                        <span></span>
                         <li>
-                            <p>خدماتنا</p>
+                            <p>من نحن</p>
                         </li>
-                        <span></span><li>
+                        <li>
                             <p>تواصل معانا</p>
                         </li>
                     </ul>
                 </div>
-            </div>
-            <div className="flex items-center justify-between gap-2">
-                <div className=" justify-self-end">
-                    <button>تسجيل الخروج</button>
-                </div>
-                <div className=" justify-self-end">
-                    <button>تسجيل الخروج</button>
+                <div>
+                    <button className="md:flex hidden items-center gap-3 text-2xl">
+                        <p> تسجيل الدخول</p>
+                        <TbLogin className="text-3xl" />
+                    </button>
+                    <FaUserCircle className="md:hidden text-4xl cursor-pointer" />
                 </div>
             </div>
         </section>

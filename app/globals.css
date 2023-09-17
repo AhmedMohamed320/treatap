@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-    font-family: 'Avenir Regular';
-    src: url("/fonts/alfont_com_AlFont_com_Avenir-Regular.otf");
-} */
-
 :root {
     --white-1: #ffffff;
     --black-1: #010101;
@@ -15,8 +10,10 @@
     --green-2: #43b27f;
     --green-3: #acd0a0;
     --green-4: #d0e6c9;
-    --green-5: #e7f1e3;
+    --green-5: #D4DAD6;
     --yellow-1: #eece91;
+    --box-shadow-1: rgba(0, 0, 0, 0.075) 0px 1px 3px,
+        rgba(0, 0, 0, 0.137) 0px 1px 2px;
 }
 
 * {
@@ -26,10 +23,9 @@
 }
 
 body {
-    /* font-family: Avenir Regular; */
-    background: var(--green-5);
-    font-size: 62.5%;
+    background: var(--white-1);
     direction: rtl;
+    overflow-x: hidden;
 }
 
 html {
@@ -38,7 +34,7 @@ html {
 
 .mainContainer {
     width: 98%;
-    max-width: 130rem;
+    max-width: 140rem;
     margin: auto;
 }
 

@@ -1,32 +1,71 @@
 .section {
-    overflow: hidden;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     gap: 10rem;
 }
 
 .part1 {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    align-items: center;
     color: var(--black-1);
-    font-size: 7rem;
+    font-size: 8rem;
     font-weight: 600;
-    height: 75%;
-    padding: 2rem;
+    height: 75vh;
+    padding: 12vh 2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: animation-1 1s ease-in-out forwards;
+}
+
+.part2 > p{
+    text-align: center;
+    padding-bottom: 3rem;
+    font-size: 2rem;
+    font-weight: 600;
 }
 
 .text > div {
+    max-width: 60rem;
+    text-align: center;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    position: relative;
+}
+
+.text > div .image3d,
+.text > div .image3d_2 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 10rem;
+    height: 10rem;
+}
+
+.image3d {
+    top: 20%;
+    left: -20%;
+}
+
+.image3d_2 {
+    width: 15rem !important;
+    height: 15rem !important;
+    top: 50%;
+    right: -50%;
+}
+
+@keyframes animation-1 {
+    0% {
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .specialSpan {
     color: var(--green-1);
     display: flex;
+    justify-content: center;
     gap: 3rem;
 }
 
@@ -38,15 +77,15 @@
 }
 
 .specialSpan span:nth-of-type(1) {
-    animation: animationText 2s 0s infinite;
+    animation: animationText 3s 0s infinite;
 }
 
 .specialSpan span:nth-of-type(2) {
-    animation: animationText 2s 0.75s infinite;
+    animation: animationText 3s 1s infinite;
 }
 
 .specialSpan span:nth-of-type(3) {
-    animation: animationText 2s 1.5s infinite;
+    animation: animationText 3s 2s infinite;
 }
 
 @keyframes animationText {
@@ -54,7 +93,7 @@
     100% {
         opacity: 0.5;
     }
-    50% {
+    20% {
         opacity: 1;
     }
 }
@@ -67,6 +106,7 @@
 .text .join {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 2rem;
 }
 
@@ -80,6 +120,7 @@
     padding: 0.5rem 1.5rem;
     background-color: var(--black-1);
     border-radius: 10rem;
+    box-shadow: var(--box-shadow-1);
 }
 
 .text .join .icon {
@@ -91,7 +132,7 @@
     outline: none;
 }
 
-.text .join > div:nth-of-type(2) ul li{
+.text .join > div:nth-of-type(2) ul li {
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
@@ -102,49 +143,56 @@
     overflow: hidden;
     margin-left: -1.5rem;
     background-color: var(--white-1);
+    box-shadow: var(--box-shadow-1);
 }
 
-.text .join > div:nth-of-type(2) ul li img{
+.text .join > div:nth-of-type(2) ul li img {
     height: 90%;
 }
 
-.text .join > div:nth-of-type(2)>p{
+.text .join > div:nth-of-type(2) > p {
     background-color: var(--yellow-1);
     color: var(--black-1);
     padding: 0.5rem 1.5rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border-radius: 10rem;
+    box-shadow: var(--box-shadow-1);
 }
 
-.text .join > div:nth-of-type(2)>p span{
+.text .join > div:nth-of-type(2) > p span {
     display: inline-block;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 500;
 }
 
+.part2 {
+    height: 25%;
+}
+
 .service {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
 }
 
 .service > div {
-    width: fit-content;
-    display: grid;
-    grid-template-columns: 1fr 25rem;
     border-radius: 1rem;
+    padding: 0.5rem;
     font-size: 1.6rem;
-    background-color: var(--green-3);
+    background: var(--green-3);
     position: relative;
+    box-shadow: var(--box-shadow-1);
+    height: 13rem;
 }
 
-.service > div > div:nth-of-type(1) {
-    background-color: var(--green-1);
-    padding: 1rem 2rem;
+.service > div > .img {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0.5rem;
 }
 
 .service > div > div:nth-of-type(2) {
@@ -161,8 +209,8 @@
     font-size: 1.5rem;
     font-weight: 500;
 }
-.service > div > div:nth-of-type(1) img {
-    width: 7rem;
+.service > div > .img img {
+    width: 6rem;
 }
 
 .service > div .arrow {
@@ -177,7 +225,7 @@
     align-items: center;
     justify-content: center;
     font-size: 2.2rem;
-    border: 1rem solid var(--green-5);
+    border: 1rem solid var(--white-1);
 }
 
 .service > div .arrow::before,
@@ -193,12 +241,66 @@
     top: 0;
     right: -3rem;
     border-top-left-radius: 5rem;
-    box-shadow: -0.7rem -0.8rem 0 0.4rem var(--green-5);
+    box-shadow: -0.7rem -0.8rem 0 0.4rem var(--white-1);
 }
 
 .service > div .arrow::after {
     bottom: -3rem;
     left: 0;
     border-top-left-radius: 5rem;
-    box-shadow: -0.8rem -0.6rem 0 0.4rem var(--green-5);
+    box-shadow: -0.8rem -0.6rem 0 0.4rem var(--white-1);
+}
+
+.circle1,
+.circle2 {
+    position: absolute;
+    z-index: -1;
+    width: 50rem;
+    height: 50rem;
+    background-color: var(--green-4);
+    filter: blur(5rem);
+    border-radius: 50%;
+}
+
+.circle1 {
+    top: -20rem;
+    left: -20rem;
+}
+
+.circle2 {
+    top: -10rem;
+    right: -30rem;
+    background-color: #ffc8637e;
+}
+
+@media (max-width: 767px) {
+    .circle1 {
+        left: -30rem;
+    }
+
+    .circle2 {
+        right: -40rem;
+    }
+
+    .text > div .image3d,
+    .text > div .image3d_2 {
+        display: none;
+    }
+}
+
+@media (max-width: 76rem) {
+    .section {
+        height: 100%;
+        gap: 0rem;
+    }
+    .service {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 4rem 2rem;
+    }
+}
+
+@media (max-width: 40rem) {
+    .service {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
