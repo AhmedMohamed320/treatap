@@ -1,8 +1,8 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
 import classes from "./Nav.module.css";
 import { TbLogin } from "react-icons/tb";
-import { BsListNested } from "react-icons/bs";
+import { BsListNested, BsSearch } from "react-icons/bs";
 import { FaUserCircle } from "react-icons/fa";
 
 const Nav = (props) => {
@@ -25,12 +25,7 @@ const Nav = (props) => {
     return (
         <section className={navClass}>
             <div className="mainContainer">
-                <div className={`md:hidden`}>
-                    <BsListNested
-                        className="text-4xl cursor-pointer"
-                        onClick={props.onShowAside}
-                    />
-                </div>
+                
                 <div className={classes.logo}>
                     <img src="/image/mainLogo.png" alt="" />
                 </div>
@@ -47,12 +42,21 @@ const Nav = (props) => {
                         </li>
                     </ul>
                 </div>
+                <div className={classes.search}>
+                    <input type="text" name="" id="" />
+                    <BsSearch />
+                </div>
                 <div>
                     <button className="md:flex hidden items-center gap-3 text-2xl">
                         <p> تسجيل الدخول</p>
                         <TbLogin className="text-3xl" />
                     </button>
-                    <FaUserCircle className="md:hidden text-4xl cursor-pointer" />
+                    <div className={`md:hidden`}>
+                    <BsListNested
+                        className="text-4xl cursor-pointer"
+                        onClick={props.onShowAside}
+                    />
+                </div>
                 </div>
             </div>
         </section>

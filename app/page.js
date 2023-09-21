@@ -83,12 +83,8 @@ export default function Home() {
                                 <div>
                                     <p>حجز استشاره طبيه اونلاين</p>
                                     <p>
-                                        احجز استشارة طبية عبر الإنترنت الآن
-                                        لتلبية احتياجاتك الصحية.
+                                          كشفك بقا سهل ودقه افضل مع وجود ملفك الطبي
                                     </p>
-                                </div>
-                                <div className={classes.arrow}>
-                                    <MdNorthWest />
                                 </div>
                             </div>
                             <div>
@@ -99,9 +95,6 @@ export default function Home() {
                                     <p>سوقنا</p>
                                     <p>اطلب جميع احتياجاتك الطبيه الان</p>
                                 </div>
-                                <div className={classes.arrow}>
-                                    <MdNorthWest />
-                                </div>
                             </div>
                             <div>
                                 <div className={classes.img}>
@@ -111,9 +104,6 @@ export default function Home() {
                                     <p>سوقنا</p>
                                     <p>اطلب جميع احتياجاتك الطبيه الان</p>
                                 </div>
-                                <div className={classes.arrow}>
-                                    <MdNorthWest />
-                                </div>
                             </div>
                             <div>
                                 <div className={classes.img}>
@@ -122,9 +112,6 @@ export default function Home() {
                                 <div>
                                     <p>سوقنا</p>
                                     <p>اطلب جميع احتياجاتك الطبيه الان</p>
-                                </div>
-                                <div className={classes.arrow}>
-                                    <MdNorthWest />
                                 </div>
                             </div>
                         </div>
