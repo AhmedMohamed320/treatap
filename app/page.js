@@ -22,9 +22,7 @@ export default function Home() {
                                 <p>رعايه صحيه</p>
                                 <div className={classes.specialSpan}>
                                     <span> افضل</span>
-
                                     <span> اسرع </span>
-
                                     <span> اضمن</span>
                                 </div>
                                 <p className={classes.sub}>
